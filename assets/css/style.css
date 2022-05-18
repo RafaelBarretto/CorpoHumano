@@ -1,0 +1,684 @@
+body {
+  margin: 0px;
+  padding: 0px;
+  overflow: hidden;
+  height: 100vh;
+  width: 100vw;
+}
+
+#SetaProximo {
+  width: 30px;
+  height: 30px;
+  content: ">";
+  position: fixed;
+  top: 10px;
+  right: 10px;
+}
+
+#wrap-content {
+  width: calc(4 * 100vw);
+  max-height: 100vh;
+  margin: auto;
+  display: flex;
+  flex-flow: column wrap;
+  align-self: start;
+  overflow: hidden;
+  position: fixed;
+}
+
+.Page {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+}
+
+.contentStage {
+  max-height: 649px;
+  height: 100vh;
+  min-height: 649px;
+  max-width: 1200px;
+  height: 100vh;
+  min-width: 1200px;
+  margin: auto;
+}
+.pop-up {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  display: none;
+  align-self: center;
+  justify-self: center;
+  color: #44be96;
+}
+
+.pop-up.next {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn {
+  align-self: center;
+  justify-content: center;
+  width: fit-content;
+  height: fit-content;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: medium;
+  font-weight: bold;
+  text-transform: uppercase;
+  background-color: #88d7bd;
+  margin: auto;
+  z-index: 1000;
+}
+.btn:hover {
+  background-color: #6bbda2;
+}
+.btn .nextPagebtn {
+  color: #fff;
+  text-decoration: none;
+  display: flex;
+  padding: 15px 20px;
+}
+
+/*****************************************
+******************************************
+********    Página Inicial    ************
+******************************************
+*****************************************/
+
+#HomePage .PageTopo {
+  display: flex;
+  width: 100%;
+  height: 310px;
+  background-image: url("../img/pg1/FundoTopoPG1.png");
+  background-repeat: no-repeat;
+  background-position-x: center;
+  background-position-y: -40px;
+  background-size: contain;
+}
+
+#HomePage .PageConteudo {
+  display: flex;
+  width: 100%;
+  height: 120px;
+  margin-top: -110px;
+  background-image: url("../img/pg1/Titulo.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  justify-content: space-between;
+  justify-items: center;
+  align-items: center;
+}
+.col {
+  margin-top: 25%;
+  margin-left: 50%; margin-bottom: 25px;/* display: flex; */
+  /* flex-wrap: nowrap; */
+  /* align-content: space-around; */
+  /* justify-content: flex-start; */
+  /* align-items: center; */
+  /* flex-direction: column; */
+}
+.col::after {
+  content: "";
+}
+
+#HomePage .PageRodape {
+  display: flex;
+  width: 100%;
+  height: 450px;
+  background-image: url("../img/pg1/personagens.png");
+  background-repeat: no-repeat;
+  align-items: center;
+  background-size: contain;
+  background-position-y: center;
+  background-position-x: 85%;
+}
+
+#HomePage .PageRodape .PageFundoRodape {
+  width: 100%;
+  height: 300px;
+  background-image: url("../img/pg1/FundoRodapePG1.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+/*****************************************
+******************************************
+*******    Página de seleção    **********
+******************************************
+*****************************************/
+
+#SelectorPage .PageTopo {
+  display: flex;
+  width: 100%;
+  height: 245px;
+  background-image: url("../img/pg2/FundoTopoPG2.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+#SelectorPage .PageRodape {
+  display: flex;
+  width: 100%;
+  height: 238px;
+  background-image: url("../img/pg2/FundoRodapePG2.png");
+  background-repeat: no-repeat;
+  align-items: center;
+  background-size: contain;
+  background-position: center;
+}
+
+#SelectorPage .PageConteudo {
+  display: flex;
+  width: 100%;
+  height: calc(100vh - 238px - 245px);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  align-items: center;
+  justify-content: center;
+}
+
+.seletor {
+  width: 200px;
+  height: 200px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+.seletor:hover {
+  zoom: 1.25;
+}
+
+#seletor-menina {
+  background-image: url("../img/pg2/botao_menina.png");
+}
+
+#seletor-menino {
+  background-image: url("../img/pg2/botao_menino.png");
+}
+
+/*****************************************
+******************************************
+*******    Página de Montagem    *********
+******************************************
+*****************************************/
+
+#BodyPuzzlePage .PageTopo {
+  display: flex;
+  width: 100%;
+  height: 189px;
+  background-image: url("../img/pg3/FundoTopoPG3.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+#BodyPuzzlePage .PageRodape {
+  display: flex;
+  width: 100%;
+  height: 221px;
+  background-image: url("../img/pg3/FundoRodapePG3.png");
+  background-repeat: no-repeat;
+  align-items: center;
+  background-size: contain;
+  background-position: center;
+}
+
+#BodyPuzzlePage .PageConteudo {
+  display: flex;
+  width: 100%;
+  height: calc(100vh - 221px - 189px);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  align-items: center;
+  justify-content: center;
+}
+
+#BodyPuzzlePage #PalcoPecasCorpo {
+  height: calc(577px * 0.83);
+  width: 435px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+}
+
+.row {
+  display: inline-flex;
+}
+
+#BodyPuzzlePage #PalcoMontagemCorpo #palcoTronco {
+  display: inline-flex;
+  height: calc(215px * 0.8);
+  width: 100%;
+  margin-top: -15px;
+}
+
+#BodyPuzzlePage #PalcoMontagemCorpo {
+  height: calc(577px * 0.83);
+  width: calc(435px * 0.81);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  display: block;
+}
+
+.peca {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+#pecaCorpo01 {
+  width: calc(193px * 0.83);
+  height: calc(180px * 0.83);
+}
+#pecaCorpo02 {
+  width: calc(117px * 0.83);
+  height: calc(215px * 0.83);
+}
+#pecaCorpo03 {
+  width: calc(82px * 0.83);
+  height: calc(215px * 0.83);
+}
+
+#pecaCorpo04 {
+  width: calc(82px * 0.83);
+  height: calc(215px * 0.83);
+}
+#pecaCorpo05 {
+  width: calc(150px * 0.83);
+  height: calc(239px * 0.83);
+}
+
+#pecaCorpo01.OK,
+#pecaCorpo02.OK,
+#pecaCorpo03.OK,
+#pecaCorpo04.OK,
+#pecaCorpo05.OK,
+#silaba1.OK,
+#silaba2.OK,
+#silaba3.OK,
+#silaba4.OK,
+#silaba5.OK,
+#silaba6.OK,
+#silaba7.OK,
+#silaba8.OK,
+#silaba9.OK {
+  visibility: hidden;
+}
+
+/* Montagem Corpo Menino */
+
+#BodyPuzzlePage #PalcoMontagemCorpo.menino {
+  background-image: url("../img/pg3/modelo_personagem_menino.png");
+}
+
+#BodyPuzzlePage #PalcoMontagemCorpo.menino #encaixe01 {
+  width: calc(193px * 0.83);
+  height: calc(180px * 0.83);
+  margin: auto;
+}
+
+#BodyPuzzlePage #PalcoMontagemCorpo.menino #encaixe02 {
+  width: calc(117px * 0.83);
+  height: calc(215px * 0.83);
+  margin-left: -18px;
+  margin-top: -20px;
+  display: inline-flex;
+}
+
+#BodyPuzzlePage #PalcoMontagemCorpo.menino #encaixe03 {
+  width: calc(82px * 0.83);
+  height: calc(215px * 0.83);
+  display: inline-flex;
+  margin-left: 75px;
+}
+
+#BodyPuzzlePage #PalcoMontagemCorpo.menino #encaixe04 {
+  width: calc(82px * 0.83);
+  height: calc(215px * 0.83);
+  margin-left: -18px;
+  display: inline-flex;
+}
+
+#BodyPuzzlePage #PalcoMontagemCorpo.menino #encaixe05 {
+  width: calc(150px * 0.83);
+  height: calc(239px * 0.83);
+  margin-top: -70px;
+  margin-left: 111px;
+}
+
+#BodyPuzzlePage #PalcoMontagemCorpo.menino #encaixe01.OK,
+#BodyPuzzlePage #PalcoPecasCorpo.menino #pecaCorpo01 {
+  background-image: url("../img/pg3/peca01_menino.png");
+}
+
+#BodyPuzzlePage #PalcoMontagemCorpo.menino #encaixe02.OK,
+#BodyPuzzlePage #PalcoPecasCorpo.menino #pecaCorpo02 {
+  background-image: url("../img/pg3/peca02_menino.png");
+}
+
+#BodyPuzzlePage #PalcoMontagemCorpo.menino #encaixe03.OK,
+#BodyPuzzlePage #PalcoPecasCorpo.menino #pecaCorpo03 {
+  background-image: url("../img/pg3/peca03_menino.png");
+}
+
+#BodyPuzzlePage #PalcoMontagemCorpo.menino #encaixe04.OK,
+#BodyPuzzlePage #PalcoPecasCorpo.menino #pecaCorpo04 {
+  background-image: url("../img/pg3/peca04_menino.png");
+}
+
+#BodyPuzzlePage #PalcoMontagemCorpo.menino #encaixe05.OK,
+#BodyPuzzlePage #PalcoPecasCorpo.menino #pecaCorpo05 {
+  background-image: url("../img/pg3/peca05_menino.png");
+}
+
+/* Palco de montagem Menina */
+#BodyPuzzlePage #PalcoMontagemCorpo.menina {
+  background-image: url("../img/pg3/modelo_personagem_menina.png");
+}
+
+#BodyPuzzlePage #PalcoMontagemCorpo.menina #encaixe01 {
+  width: calc(182px * 0.84);
+  height: calc(200px * 0.84);
+  margin-top: 5px;
+  margin-left: 105px;
+}
+
+#BodyPuzzlePage #PalcoMontagemCorpo.menina #encaixe02 {
+  width: calc(117px * 0.9);
+  height: calc(176px * 0.9);
+  margin-left: -23px;
+  margin-top: -45px;
+  display: inline-flex;
+}
+
+#BodyPuzzlePage #PalcoMontagemCorpo.menina #encaixe03 {
+  width: calc(82px * 0.84);
+  height: calc(215px * 0.84);
+  display: inline-flex;
+  margin-left: 80px;
+  margin-top: -25px;
+}
+
+#BodyPuzzlePage #PalcoMontagemCorpo.menina #encaixe04 {
+  width: calc(82px * 0.84);
+  height: calc(215px * 0.84);
+  margin-left: -20px;
+  margin-top: -25px;
+  display: inline-flex;
+}
+
+#BodyPuzzlePage #PalcoMontagemCorpo.menina #encaixe05 {
+  width: calc(136px * 0.87);
+  height: calc(254px * 0.87);
+  margin-top: -102px;
+  margin-left: 119px;
+}
+
+#BodyPuzzlePage #PalcoMontagemCorpo.menina #encaixe01.OK,
+#BodyPuzzlePage #PalcoPecasCorpo.menina #pecaCorpo01 {
+  background-image: url("../img/pg3/peca01_menina.png");
+}
+
+#BodyPuzzlePage #PalcoMontagemCorpo.menina #encaixe02.OK,
+#BodyPuzzlePage #PalcoPecasCorpo.menina #pecaCorpo02 {
+  background-image: url("../img/pg3/peca02_menina.png");
+}
+
+#BodyPuzzlePage #PalcoMontagemCorpo.menina #encaixe03.OK,
+#BodyPuzzlePage #PalcoPecasCorpo.menina #pecaCorpo03 {
+  background-image: url("../img/pg3/peca03_menina.png");
+}
+
+#BodyPuzzlePage #PalcoMontagemCorpo.menina #encaixe04.OK,
+#BodyPuzzlePage #PalcoPecasCorpo.menina #pecaCorpo04 {
+  background-image: url("../img/pg3/peca04_menina.png");
+}
+
+#BodyPuzzlePage #PalcoMontagemCorpo.menina #encaixe05.OK,
+#BodyPuzzlePage #PalcoPecasCorpo.menina #pecaCorpo05 {
+  background-image: url("../img/pg3/peca05_menina.png");
+}
+
+/*****************************************
+******************************************
+********    Página do Puzzle    **********
+******************************************
+*****************************************/
+
+#TilePuzzlePage .PageTopo {
+  display: flex;
+  width: 100%;
+  height: 189px;
+  background-image: url("../img/pg4/FundoTopoPG4.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+#TilePuzzlePage .PageRodape {
+  display: flex;
+  width: 100%;
+  height: 221px;
+  background-image: url("../img/pg4/FundoRodapePG4.png");
+  background-repeat: no-repeat;
+  align-items: center;
+  background-size: contain;
+  background-position: center;
+}
+
+#TilePuzzlePage .PageConteudo {
+  display: flex;
+  width: 100%;
+  height: calc(100vh - 221px - 189px);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  align-items: center;
+  justify-content: center;
+}
+
+#TilePuzzlePage #PalcoPecasCorpo {
+  height: calc(577px * 0.83);
+  max-width: 435px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+}
+
+#TilePuzzlePage #PalcoMontagemCorpo {
+  height: calc(694px * 0.9);
+  width: calc(569px * 0.9);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  display: block;
+}
+
+#TilePuzzlePage #PalcoMontagemCorpo.menina {
+  background-image: url("../img/pg4/personagem_caixas_menina.png");
+}
+#TilePuzzlePage #PalcoMontagemCorpo.menino {
+  background-image: url("../img/pg4/personagem_caixas_menino.png");
+}
+
+#TilePuzzlePage #palcoPalavraCabeca {
+  display: flex;
+  margin-top: 150px;
+  margin-left: 305px;
+  width: fit-content;
+  height: fit-content;
+}
+#TilePuzzlePage #palcoPalavraTronco {
+  display: flex;
+  width: fit-content;
+  height: fit-content;
+  margin-left: 310px;
+  margin-top: 45px;
+}
+#TilePuzzlePage #palcoPalavraBraco {
+  display: flex;
+  width: fit-content;
+  height: fit-content;
+  margin-top: 7px;
+  margin-left: 312px;
+}
+
+#TilePuzzlePage #palcoPalavraPerna {
+  display: flex;
+  margin-top: 50px;
+  margin-left: 270px;
+  width: fit-content;
+  height: fit-content;
+}
+
+#palcoPalavraCabeca #encaixe-silaba1 {
+  display: inline-flex;
+  margin-left: 0px;
+}
+#palcoPalavraCabeca #encaixe-silaba2 {
+  display: inline-flex;
+  margin-left: -18px;
+}
+#palcoPalavraCabeca #encaixe-silaba3 {
+  display: inline-flex;
+  margin-left: -18px;
+}
+#palcoPalavraTronco #encaixe-silaba4 {
+  display: inline-flex;
+  margin-left: 0px;
+}
+#palcoPalavraTronco #encaixe-silaba5 {
+  display: inline-flex;
+  margin-left: -18px;
+}
+#palcoPalavraBraco #encaixe-silaba6 {
+  display: inline-flex;
+  margin-left: 0px;
+}
+#palcoPalavraBraco #encaixe-silaba7 {
+  display: inline-flex;
+  margin-left: -18px;
+}
+#palcoPalavraPerna #encaixe-silaba8 {
+  display: inline-flex;
+  margin-left: 0px;
+}
+#palcoPalavraPerna #encaixe-silaba9 {
+  display: inline-flex;
+  margin-left: -18px;
+}
+
+#TilePuzzlePage #PalcoMontagemCorpo #encaixe-silaba1.OK,
+#TilePuzzlePage #PalcoPecasCorpo #silaba1 {
+  background-image: url("../img/pg4/silaba01.png");
+}
+
+#TilePuzzlePage #PalcoMontagemCorpo #encaixe-silaba2.OK,
+#TilePuzzlePage #PalcoPecasCorpo #silaba2 {
+  background-image: url("../img/pg4/silaba02.png");
+}
+
+#TilePuzzlePage #PalcoMontagemCorpo #encaixe-silaba3.OK,
+#TilePuzzlePage #PalcoPecasCorpo #silaba3 {
+  background-image: url("../img/pg4/silaba03.png");
+}
+
+#TilePuzzlePage #PalcoMontagemCorpo #encaixe-silaba4.OK,
+#TilePuzzlePage #PalcoPecasCorpo #silaba4 {
+  background-image: url("../img/pg4/silaba04.png");
+}
+
+#TilePuzzlePage #PalcoMontagemCorpo #encaixe-silaba5.OK,
+#TilePuzzlePage #PalcoPecasCorpo #silaba5 {
+  background-image: url("../img/pg4/silaba05.png");
+}
+
+#TilePuzzlePage #PalcoMontagemCorpo #encaixe-silaba6.OK,
+#TilePuzzlePage #PalcoPecasCorpo #silaba6 {
+  background-image: url("../img/pg4/silaba06.png");
+}
+
+#TilePuzzlePage #PalcoMontagemCorpo #encaixe-silaba7.OK,
+#TilePuzzlePage #PalcoPecasCorpo #silaba7 {
+  background-image: url("../img/pg4/silaba07.png");
+}
+
+#TilePuzzlePage #PalcoMontagemCorpo #encaixe-silaba8.OK,
+#TilePuzzlePage #PalcoPecasCorpo #silaba8 {
+  background-image: url("../img/pg4/silaba08.png");
+}
+
+#TilePuzzlePage #PalcoMontagemCorpo #encaixe-silaba9.OK,
+#TilePuzzlePage #PalcoPecasCorpo #silaba9 {
+  background-image: url("../img/pg4/silaba09.png");
+}
+
+#encaixe-silaba1,
+#silaba1 {
+  width: calc(95px * 0.74);
+  height: calc(69px * 0.74);
+}
+
+#encaixe-silaba2,
+#silaba2 {
+  width: calc(122px * 0.74);
+  height: calc(69px * 0.74);
+}
+
+#encaixe-silaba3,
+#silaba3 {
+  width: calc(101px * 0.74);
+  height: calc(69px * 0.74);
+}
+
+#encaixe-silaba4,
+#silaba4 {
+  width: calc(168px * 0.74);
+  height: calc(69px * 0.74);
+}
+
+#encaixe-silaba5,
+#silaba5 {
+  width: calc(111px * 0.74);
+  height: calc(69px * 0.74);
+}
+
+#encaixe-silaba6,
+#silaba6 {
+  width: calc(139px * 0.74);
+  height: calc(69px * 0.74);
+}
+
+#encaixe-silaba7,
+#silaba7 {
+  width: calc(110px * 0.74);
+  height: calc(69px * 0.74);
+}
+
+#encaixe-silaba8,
+#silaba8 {
+  width: calc(139px * 0.74);
+  height: calc(69px * 0.74);
+}
+
+#encaixe-silaba9,
+#silaba9 {
+  width: calc(111px * 0.74);
+  height: calc(69px * 0.74);
+}

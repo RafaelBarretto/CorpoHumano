@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Quebra Cabeça - Corpo Humano</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <script src="./vendor/jquery-3.6.0.js"></script>
+    <script src="./vendor/ui/1.13.1/jquery-ui.js"></script>
+    <script src="./assets/js/scripts.js"></script>
+</head>
+
+<body>
+    <div id="wrap-content" style="left: 0;">
+        <div id="HomePage" class="Page">
+            <div class="contentStage">
+                <div class="PageTopo"></div>
+                <div id="PageConteudo-1" class="PageConteudo">
+                    <div class="col">
+                        <div class="btn next">
+                            <a href="#" class="nextPagebtn">Iniciar</a>
+                        </div>
+                    </div>
+                    <div class="col">
+                    </div>
+                </div>
+                <div class="PageRodape">
+                    <div class="PageMeninos"></div>
+                    <div class="PageFundoRodape"></div>
+                </div>
+            </div>
+        </div>
+        <div id="SelectorPage" class="Page">
+            <div class="contentStage">
+                <div class="PageTopo"></div>
+                <div id="PageConteudo-2" class="PageConteudo">
+                    <div id="seletor-menina" data-personagem="menina" class="seletor nextPagebtn"></div>
+                    <div id="seletor-menino" data-personagem="menino" class="seletor nextPagebtn"></div>
+                </div>
+                <div class="PageRodape"></div>
+            </div>
+        </div>
+
+        <div id="BodyPuzzlePage" class="Page">
+            <div class="PageTopo"></div>
+            <div id="PageConteudo-3" class="PageConteudo">
+                <div id="PalcoMontagemCorpo">
+                    <div id="encaixe01" class="peca drop" data-rel="pecaCorpo01"></div>
+                    <div id="palcoTronco">
+                        <div id="encaixe03" class="peca drop" data-rel="pecaCorpo03"></div>
+                        <div id="encaixe02" class="peca drop" data-rel="pecaCorpo02"></div>
+                        <div id="encaixe04" class="peca drop" data-rel="pecaCorpo04"></div>
+                    </div>
+                    <div id="encaixe05" class="peca drop" data-rel="pecaCorpo05"></div>
+                </div>
+
+                <div id="PalcoPecasCorpo">
+                    <div id="pop-up-3" class="pop-up">
+                        <h1>PARABÉNS!</h1>
+                        <h2>Você conseguiu montar o corpo humano.
+                            Agora vamos dar nomes as essas partes?</h2>
+                        <div class='btn'>
+                            <a href='#' class='nextPagebtn'>Próximo</a>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div id="pecaCorpo05" class="peca drag"></div>
+                        <div id="pecaCorpo02" class="peca drag"></div>
+                    </div>
+                    <div class="row">
+                        <div id="pecaCorpo01" class="peca drag"></div>
+                        <div id="pecaCorpo03" class="peca drag"></div>
+                        <div id="pecaCorpo04" class="peca drag"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="PageRodape"></div>
+        </div>
+
+        <div id="TilePuzzlePage" class="Page">
+            <div class="PageTopo"></div>
+            <div id="PageConteudo-4" class="PageConteudo">
+                <div id="PalcoMontagemCorpo">
+                    <div id="palcoPalavraCabeca">
+                        <div id="encaixe-silaba1" class="peca drop" data-rel="silaba1"></div>
+                        <div id="encaixe-silaba2" class="peca drop" data-rel="silaba2"></div>
+                        <div id="encaixe-silaba3" class="peca drop" data-rel="silaba3"></div>
+                    </div>
+                    <div id="palcoPalavraTronco">
+                        <div id="encaixe-silaba4" class="peca drop" data-rel="silaba4"></div>
+                        <div id="encaixe-silaba5" class="peca drop" data-rel="silaba5"></div>
+                    </div>
+                    <div id="palcoPalavraBraco">
+                        <div id="encaixe-silaba6" class="peca drop" data-rel="silaba6"></div>
+                        <div id="encaixe-silaba7" class="peca drop" data-rel="silaba7"></div>
+                    </div>
+                    <div id="palcoPalavraPerna">
+                        <div id="encaixe-silaba8" class="peca drop" data-rel="silaba8"></div>
+                        <div id="encaixe-silaba9" class="peca drop" data-rel="silaba9"></div>
+                    </div>
+                </div>
+
+                <div id="PalcoPecasCorpo">
+                    <div id="pop-up-4" class="pop-up">
+                        <h1>PARABÉNS!</h1>
+                        <h2>Você conhece todo o corpo humano.</h2>
+                    </div>
+                    <div class="row">
+                        <div id="silaba1" class="peca drag"></div>
+                        <div id="silaba2" class="peca drag"></div>
+                        <div id="silaba3" class="peca drag"></div>
+                    </div>
+                    <div class="row">
+                        <div id="silaba4" class="peca drag"></div>
+                        <div id="silaba5" class="peca drag"></div>
+                        <div id="silaba6" class="peca drag"></div>
+                    </div>
+                    <div class="row">
+                        <div id="silaba7" class="peca drag"></div>
+                        <div id="silaba8" class="peca drag"></div>
+                        <div id="silaba9" class="peca drag"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="PageRodape"></div>
+        </div>
+
+    </div>
+</body>
+
+</html>
